@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Poppins:wght@400;500;600&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
@@ -12,10 +15,10 @@
 <body>
     <header class="header">
         <div class="container header-container">
-            <div class="logo">
+            <a href="./index.html" class="logo">
                 <img src="./img/logotype.svg" alt="Antools Logo" class="logo-image">
-                <span class="logo-text">antools.</span>
-            </div>
+                <h1 class="logo-text">antools.</h1>
+            </a>
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
@@ -29,8 +32,8 @@
                 </ul>
             </nav>
             <div class="auth-buttons">
-                <button class="btn btn-login">Login</button>
-                <button class="btn btn-signup">Sign Up</button>
+                <button class="btn-login">Login</button>
+                <button class="btn-signup">Sign Up</button>
             </div>
         </div>
     </header>
@@ -42,17 +45,29 @@
                 <p class="hero-description">Antool is a web collection of information on paid or free Design and
                     Development tools</p>
                 <div class="search-bar">
-                    <input type="text" class="search-input" placeholder="find more than 430+ tools...">
+                    <img src="./img/icons/search.svg" alt="Search" class="search-icon">
+                    <input type="text" class="search-input" placeholder="find more than 430+ tools..." id="search-tools">
                     <button class="btn btn-search">Search</button>
                 </div>
-                <div class="social-links">
-                    <a href="#" class="social-icon"><img src="facebook.png" alt="Facebook"></a> <a href="#"
-                        class="social-icon"><img src="instagram.png" alt="Instagram"></a>
-                    <a href="#" class="social-icon"><img src="twitter.png" alt="Twitter"></a>
-                </div>
             </div>
-            <div class="hero-image-placeholder">
-                <img src="1.png" alt="Design and Development Tools" class="hero-illustration">
+            <div class="hero-social">
+                <ul class="social-links hero-social-links">
+                    <li class="social-item">
+                        <a href="https://www.facebook.com" class="social-icon facebook-icon">
+                            <img src="./img/icons/Facebook.svg" alt="Facebook" class="social-img">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.instagram.com" class="social-icon instagram-icon">
+                            <img src="./img/icons/Instagram.svg" alt="Instagram" class="social-img">
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://x.com" class="social-icon x-icon">
+                            <img src="./img/icons/X.svg" alt="X (Twitter)" class="social-img">
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -60,88 +75,120 @@
     <section class="popular-tools-section">
         <div class="container popular-tools-container">
             <h2 class="section-title">Most Popular Tools</h2>
-            <p class="section-subtitle">Tools for the best Designers and Developers most popularly used in the world</p>
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <img src="figma.png" alt="Figma" class="tool-icon">
-                    <h3 class="tool-name">FIGMA</h3>
-                    <span class="tool-price">Free</span>
+            <p class="section-subtitle">Tools for the best Designers and Developers <br> most popularly used in the world</p>
+            <ul class="tools-list">
+                <li class="tool-card">
+                    <div class="tool-header">
+                        <img src="./img/logotypes/figma.svg" alt="Figma" class="tool-icon">
+                        <div class="tool-info">
+                            <h3 class="tool-name">FIGMA</h3>
+                            <span class="tool-price">Free</span>
+                        </div>
+                    </div>
                     <p class="tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div class="tool-actions">
-                        <button class="action-btn like-btn"></button>
-                        <button class="action-btn bookmark-btn"></button>
+                        <img src="./img/icons/like.svg" alt="like" class="action-icon like-icon">
+                        <img src="./img/icons/add.svg" alt="bookmark" class="action-icon bookmark-icon">
                         <a href="#" class="btn btn-visit">Visit</a>
                     </div>
-                </div>
-                <div class="tool-card">
-                    <img src="sketch.png" alt="Sketch" class="tool-icon">
-                    <h3 class="tool-name">Sketch</h3>
-                    <span class="tool-price">Trial & Paid</span>
+                </li>
+                <li class="tool-card">
+                    <div class="tool-header">
+                        <img src="./img/logotypes/sketch.svg" alt="Sketch" class="tool-icon">
+                        <div class="tool-info">
+                            <h3 class="tool-name">Sketch</h3>
+                            <span class="tool-price">Trial & Paid</span>
+                        </div>
+                    </div>
                     <p class="tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div class="tool-actions">
-                        <button class="action-btn like-btn"></button>
-                        <button class="action-btn bookmark-btn"></button>
+                        <img src="./img/icons/like.svg" alt="like" class="action-icon like-icon">
+                        <img src="./img/icons/add.svg" alt="bookmark" class="action-icon bookmark-icon">
                         <a href="#" class="btn btn-visit">Visit</a>
                     </div>
-                </div>
-                <div class="tool-card">
-                    <img src="visual-studio-code.png" alt="Visual Studio Code" class="tool-icon">
-                    <h3 class="tool-name">Visual Studio Code</h3>
-                    <span class="tool-price">Free</span>
+                </li>
+                <li class="tool-card">
+                    <div class="tool-header">
+                        <img src="./img/logotypes/vsc.svg" alt="Visual Studio Code" class="tool-icon">
+                        <div class="tool-info">
+                            <h3 class="tool-name">Visual Studio Code</h3>
+                            <span class="tool-price">Free</span>
+                        </div>
+                    </div>
                     <p class="tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div class="tool-actions">
-                        <button class="action-btn like-btn"></button>
-                        <button class="action-btn bookmark-btn"></button>
+                        <img src="./img/icons/like.svg" alt="like" class="action-icon like-icon">
+                        <img src="./img/icons/add.svg" alt="bookmark" class="action-icon bookmark-icon">
                         <a href="#" class="btn btn-visit">Visit</a>
                     </div>
-                </div>
-                <div class="tool-card">
-                    <img src="notion.png" alt="Notion" class="tool-icon">
-                    <h3 class="tool-name">Notion</h3>
-                    <span class="tool-price">Free & Paid</span>
+                </li>
+                <li class="tool-card">
+                    <div class="tool-header">
+                        <img src="./img/logotypes/notion.svg" alt="Notion" class="tool-icon">
+                        <div class="tool-info">
+                            <h3 class="tool-name">Notion</h3>
+                            <span class="tool-price">Free & Paid</span>
+                        </div>
+                    </div>
                     <p class="tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div class="tool-actions">
-                        <button class="action-btn like-btn"></button>
-                        <button class="action-btn bookmark-btn"></button>
+                        <img src="./img/icons/like.svg" alt="like" class="action-icon like-icon">
+                        <img src="./img/icons/add.svg" alt="bookmark" class="action-icon bookmark-icon">
                         <a href="#" class="btn btn-visit">Visit</a>
                     </div>
-                </div>
-                <div class="tool-card">
-                    <img src="slack-icon.png" alt="Slack" class="tool-icon">
-                    <h3 class="tool-name">Slack</h3>
-                    <span class="tool-price">Free & Paid</span>
+                </li>
+                <li class="tool-card">
+                    <div class="tool-header">
+                        <img src="./img/logotypes/slack.svg" alt="Slack" class="tool-icon">
+                        <div class="tool-info">
+                            <h3 class="tool-name">Slack</h3>
+                            <span class="tool-price">Free & Paid</span>
+                        </div>
+                    </div>
                     <p class="tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div class="tool-actions">
-                        <button class="action-btn like-btn"></button>
-                        <button class="action-btn bookmark-btn"></button>
+                        <img src="./img/icons/like.svg" alt="like" class="action-icon like-icon">
+                        <img src="./img/icons/add.svg" alt="bookmark" class="action-icon bookmark-icon">
                         <a href="#" class="btn btn-visit">Visit</a>
                     </div>
-                </div>
-                <div class="tool-card">
-                    <img src="invision.png" alt="Invision" class="tool-icon">
-                    <h3 class="tool-name">Invision</h3>
-                    <span class="tool-price">Free & Paid</span>
+                </li>
+                <li class="tool-card">
+                    <div class="tool-header">
+                        <img src="./img/logotypes/invision-icon.svg" alt="Notion" class="tool-icon">
+                        <div class="tool-info">
+                            <h3 class="tool-name">Invision</h3>
+                            <span class="tool-price">Free & Paid</span>
+                        </div>
+                    </div>
                     <p class="tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div class="tool-actions">
-                        <button class="action-btn like-btn"></button>
-                        <button class="action-btn bookmark-btn"></button>
+                        <img src="./img/icons/like.svg" alt="like" class="action-icon like-icon">
+                        <img src="./img/icons/add.svg" alt="bookmark" class="action-icon bookmark-icon">
                         <a href="#" class="btn btn-visit">Visit</a>
                     </div>
-                </div>
-            </div>
-            <button class="btn btn-load-more">Load more</button>
+                </li>
+            </ul>
+            <button class="tools-btn">Load more</button>
         </div>
     </section>
 
     <section class="trusted-brands-section">
             <div class="container trusted-brands-container">
                 <p class="trusted-brands-text">Trusted more than 150+ brand</p>
-                <div class="brand-logos">
-                    <img src="microsoft.png" alt="Microsoft" class="brand-logo"> <img src="google.png" alt="Google"
-                        class="brand-logo">
-                    <img src="slack.png" alt="Slack" class="brand-logo">
-                    <img src="wordpress.png" alt="WordPress" class="brand-logo">
-                </div>
+                <ul class="brand-logos">
+                    <li class="brand-logo-item">
+                        <img src="./img/logotypes/microsoft.svg" alt="Microsoft" class="brand-logo">
+                    </li>
+                    <li class="brand-logo-item">
+                        <img src="./img/logotypes/google.svg" alt="Google" class="brand-logo">
+                    </li>
+                    <li class="brand-logo-item">
+                        <img src="./img/logotypes/logo_slack.svg" alt="Slack" class="brand-logo">
+                    </li>
+                    <li class="brand-logo-item">
+                        <img src="./img/logotypes/wordpress.svg" alt="WordPress" class="brand-logo">
+                    </li>
+                </ul>
             </div>
      </section>
 
@@ -153,52 +200,68 @@
                     designers and developers</p>
                 <button class="btn btn-explore-more">Explore more</button>
             </div>
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <img src="zeplin.png" alt="Zeplin" class="tool-icon">
-                    <h3 class="tool-name">Zeplin</h3>
-                    <span class="tool-price">Free & Paid</span>
-                    <p class="tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="tool-actions">
-                        <button class="action-btn like-btn"></button>
-                        <button class="action-btn bookmark-btn"></button>
-                        <a href="#" class="btn btn-visit">Visit</a>
+            <ul class="tools-grid">
+                <li class="newcomer-tool-card">
+                    <div class="newcomer-tool-header">
+                        <img src="zeplin.png" alt="Zeplin" class="newcomer-tool-icon">
+                        <div class="newcomer-tool-info">
+                            <h3 class="newcomer-tool-name">Zeplin</h3>
+                            <span class="newcomer-tool-price">Free & Paid</span>
+                        </div>
                     </div>
-                </div>
-                <div class="tool-card">
-                    <img src="phpstorm.png" alt="PHPStorm" class="tool-icon">
-                    <h3 class="tool-name">PHPStorm</h3>
-                    <span class="tool-price">Free</span>
-                    <p class="tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="tool-actions">
-                        <button class="action-btn like-btn"></button>
-                        <button class="action-btn bookmark-btn"></button>
-                        <a href="#" class="btn btn-visit">Visit</a>
+                    <p class="newcomer-tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="newcomer-tool-actions">
+                        <img src="./img/icons/like.svg" alt="like" class="newcomer-action-icon newcomer-like-icon">
+                        <img src="./img/icons/add.svg" alt="bookmark" class="newcomer-action-icon newcomer-bookmark-icon">
+                        <a href="#" class="btn newcomer-btn-visit">Visit</a>
                     </div>
-                </div>
-                <div class="tool-card">
-                    <img src="toolbox.png" alt="Toolbox" class="tool-icon">
-                    <h3 class="tool-name">Toolbox</h3>
-                    <span class="tool-price">Free</span>
-                    <p class="tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="tool-actions">
-                        <button class="action-btn like-btn"></button>
-                        <button class="action-btn bookmark-btn"></button>
-                        <a href="#" class="btn btn-visit">Visit</a>
+                </li>
+                <li class="newcomer-tool-card">
+                    <div class="newcomer-tool-header">
+                        <img src="phpstorm.png" alt="PHPStorm" class="newcomer-tool-icon">
+                        <div class="newcomer-tool-info">
+                            <h3 class="newcomer-tool-name">PHPStorm</h3>
+                            <span class="newcomer-tool-price">Free</span>
+                        </div>
                     </div>
-                </div>
-                <div class="tool-card">
-                    <img src="procreate.png" alt="Procreate" class="tool-icon">
-                    <h3 class="tool-name">Procreate</h3>
-                    <span class="tool-price">Paid</span>
-                    <p class="tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="tool-actions">
-                        <button class="action-btn like-btn"></button>
-                        <button class="action-btn bookmark-btn"></button>
-                        <a href="#" class="btn btn-visit">Visit</a>
+                    <p class="newcomer-tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="newcomer-tool-actions">
+                        <img src="./img/icons/like.svg" alt="like" class="newcomer-action-icon newcomer-like-icon">
+                        <img src="./img/icons/add.svg" alt="bookmark" class="newcomer-action-icon newcomer-bookmark-icon">
+                        <a href="#" class="btn newcomer-btn-visit">Visit</a>
                     </div>
-                </div>
-            </div>
+                </li>
+                <li class="newcomer-tool-card">
+                    <div class="newcomer-tool-header">
+                        <img src="toolbox.png" alt="Toolbox" class="newcomer-tool-icon">
+                        <div class="newcomer-tool-info">
+                            <h3 class="newcomer-tool-name">Toolbox</h3>
+                            <span class="newcomer-tool-price">Free</span>
+                        </div>
+                    </div>
+                    <p class="newcomer-tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="newcomer-tool-actions">
+                        <img src="./img/icons/like.svg" alt="like" class="newcomer-action-icon newcomer-like-icon">
+                        <img src="./img/icons/add.svg" alt="bookmark" class="newcomer-action-icon newcomer-bookmark-icon">
+                        <a href="#" class="btn newcomer-btn-visit">Visit</a>
+                    </div>
+                </li>
+                <li class="newcomer-tool-card">
+                    <div class="newcomer-tool-header">
+                        <img src="procreate.png" alt="Procreate" class="newcomer-tool-icon">
+                        <div class="newcomer-tool-info">
+                            <h3 class="newcomer-tool-name">Procreate</h3>
+                            <span class="newcomer-tool-price">Free & Paid</span>
+                        </div>
+                    </div>
+                    <p class="newcomer-tool-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="newcomer-tool-actions">
+                        <img src="./img/icons/like.svg" alt="like" class="newcomer-action-icon newcomer-like-icon">
+                        <img src="./img/icons/add.svg" alt="bookmark" class="newcomer-action-icon newcomer-bookmark-icon">
+                        <a href="#" class="btn newcomer-btn-visit">Visit</a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -234,7 +297,7 @@
             <h2 class="section-title">Become a contributor?</h2>
             <p class="section-subtitle">Join us and get tips & tricks to become a great Designer and Developer</p>
             <div class="newsletter-form">
-                <input type="email" class="email-input" placeholder="enter your email...">
+                <input type="email" class="email-input" placeholder="enter your email..." id="newsletter-email">
                 <button class="btn btn-join-us">Join Us</button>
             </div>
         </div>
