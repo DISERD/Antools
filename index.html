@@ -15,8 +15,8 @@
 <body>
     <header class="header">
         <div class="container header-container">
-            <a href="./index.html" class="logo">
-                <img src="./img/logotype.svg" alt="Antools Logo" class="logo-image">
+            <a href="./index.html" class="header-logo">
+                <img src="./img/logotype.svg" alt="Antools Logo" class="header-logo-image">
                 <h1 class="logo-text">antools.</h1>
             </a>
             <nav class="nav">
@@ -195,15 +195,15 @@
     <section class="newcomer-tools-section">
         <div class="container newcomer-tools-container">
             <div class="newcomer-content">
-                <h2 class="section-title">Newcomer Tools</h2>
-                <p class="section-subtitle">Wow! see the latest update of the most recommended tools from reliable
+                <h2 class="newcomer-section-title">Newcomer Tools</h2>
+                <p class="newcomer-section-subtitle">Wow! see the latest update of the most recommended tools from reliable
                     designers and developers</p>
-                <button class="btn btn-explore-more">Explore more</button>
+                <button class="btn-explore-more">Explore more</button>
             </div>
             <ul class="tools-grid">
                 <li class="newcomer-tool-card">
                     <div class="newcomer-tool-header">
-                        <img src="zeplin.png" alt="Zeplin" class="newcomer-tool-icon">
+                        <img src="./img/logotypes/zeplin.svg" alt="Zeplin" class="newcomer-tool-icon">
                         <div class="newcomer-tool-info">
                             <h3 class="newcomer-tool-name">Zeplin</h3>
                             <span class="newcomer-tool-price">Free & Paid</span>
@@ -218,7 +218,7 @@
                 </li>
                 <li class="newcomer-tool-card">
                     <div class="newcomer-tool-header">
-                        <img src="phpstorm.png" alt="PHPStorm" class="newcomer-tool-icon">
+                        <img src="./img/logotypes/PHPStorm.svg" alt="PHPStorm" class="newcomer-tool-icon">
                         <div class="newcomer-tool-info">
                             <h3 class="newcomer-tool-name">PHPStorm</h3>
                             <span class="newcomer-tool-price">Free</span>
@@ -233,7 +233,7 @@
                 </li>
                 <li class="newcomer-tool-card">
                     <div class="newcomer-tool-header">
-                        <img src="toolbox.png" alt="Toolbox" class="newcomer-tool-icon">
+                        <img src="./img/logotypes/toolbox.svg" alt="Toolbox" class="newcomer-tool-icon">
                         <div class="newcomer-tool-info">
                             <h3 class="newcomer-tool-name">Toolbox</h3>
                             <span class="newcomer-tool-price">Free</span>
@@ -243,12 +243,12 @@
                     <div class="newcomer-tool-actions">
                         <img src="./img/icons/like.svg" alt="like" class="newcomer-action-icon newcomer-like-icon">
                         <img src="./img/icons/add.svg" alt="bookmark" class="newcomer-action-icon newcomer-bookmark-icon">
-                        <a href="#" class="btn newcomer-btn-visit">Visit</a>
+                        <a href="#" class="newcomer-btn-visit">Visit</a>
                     </div>
                 </li>
                 <li class="newcomer-tool-card">
                     <div class="newcomer-tool-header">
-                        <img src="procreate.png" alt="Procreate" class="newcomer-tool-icon">
+                        <img src="./img/logotypes/procreate.svg" alt="Procreate" class="newcomer-tool-icon">
                         <div class="newcomer-tool-info">
                             <h3 class="newcomer-tool-name">Procreate</h3>
                             <span class="newcomer-tool-price">Free & Paid</span>
@@ -281,62 +281,60 @@
                 </p>
             </div>
             <div class="testimonial-navigation">
-                <button class="nav-arrow prev-arrow"></button>
                 <div class="pagination-dots">
+                    <span class="dot"></span>
                     <span class="dot active"></span>
                     <span class="dot"></span>
-                    <span class="dot"></span>
                 </div>
-                <button class="nav-arrow next-arrow"></button>
             </div>
         </div>
     </section>
 
     <section class="contributor-section">
         <div class="container contributor-container">
-            <h2 class="section-title">Become a contributor?</h2>
-            <p class="section-subtitle">Join us and get tips & tricks to become a great Designer and Developer</p>
+            <h2 class="contributor-section-title">Become a contributor?</h2>
+            <p class="contributor-section-subtitle">Join us and get tips & tricks to become a great Designer and Developer</p>
             <div class="newsletter-form">
-                <input type="email" class="email-input" placeholder="enter your email..." id="newsletter-email">
-                <button class="btn btn-join-us">Join Us</button>
+                <input type="email" class="email-input" placeholder="Enter your email..." id="newsletter-email">
+                <button class="btn-join-us">Join Us</button>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container footer-container">
-            <div class="footer-col footer-about">
-                <div class="logo">
-                    <img src="./img/logotype.svg" alt="Antools Logo" class="logo-image"> <span
-                        class="logo-text">antools.</span>
-                </div>
-                <p class="footer-copyright">Copyright 2021. Antools</p>
-                <p class="footer-description">Antool is a web collection of information on paid or free Design and
-                    Development tools</p>
-            </div>
-            <div class="footer-col footer-contact">
-                <h4 class="footer-heading">Contact Us</h4>
-                <ul class="footer-list">
-                    <li class="footer-item">+621987463</li>
-                    <li class="footer-item">M Building, No.10 A</li>
-                    <li class="footer-item">antools@awesome.com</li>
-                </ul>
-            </div>
-            <div class="footer-col footer-categories">
-                <h4 class="footer-heading">Categories</h4>
-                <ul class="footer-list">
-                    <li class="footer-item">Design</li>
-                    <li class="footer-item">Development</li>
-                </ul>
-            </div>
-            <div class="footer-col footer-company">
-                <h4 class="footer-heading">Company Info</h4>
-                <ul class="footer-list">
-                    <li class="footer-item">About Us</li>
-                    <li class="footer-item">Our Partners</li>
-                    <li class="footer-item">Blog</li>
-                </ul>
-            </div>
+            <ul class="footer-first-list">
+                <li class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="./img/logo_2.svg" alt="Antools Logo" class="footer-logo-image">
+                        <p class="logo-text">antools.</p>
+                    </div>
+                    <p class="footer-copyright">Copyright 2021. Antools</p>
+                    <p class="footer-description">Antool is a web collection of information on paid or free Design and Development
+                        tools</p>
+                </li>
+
+            </ul>
+            <ul class="footer-last-list">
+                <li class="footer-col footer-contact">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <a href="tel:+621987463" class="footer-item">+621987463</a>
+                    <address class="footer-contact-address">M Building, No.10 A</address>
+                    <a href="mailto:antools@awesome.com" class="footer-item">antools@awesome.com</a>
+              </address>
+                </li>
+                <li class="footer-col footer-categories">
+                    <h4 class="footer-heading">Categories</h4>
+                    <div class="footer-item">Design</div>
+                    <div class="footer-item">Development</div>
+                </li>
+                <li class="footer-col footer-company">
+                    <h4 class="footer-heading">Company Info</h4>
+                    <div class="footer-item">About Us</div>
+                    <div class="footer-item">Our Partners</div>
+                    <div class="footer-item">Blog</div>
+                </li>
+            </ul>
         </div>
     </footer>
 </body>

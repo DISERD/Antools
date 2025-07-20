@@ -6,7 +6,7 @@
     --accent-color: #FF6E30;
     --main-text-color: white;
     --second-text-color: rgba(255, 255, 255, 0.9);
-    --third-text-color: #9A9DA0;
+    --third-text-color: rgba(255, 253, 253, 0.55);
 
     --main-background-color: #1E252B;
     --card-background-color: #283036;
@@ -16,6 +16,8 @@
 
     --main-hover-color: #c65015;
     --main-tool-hover-color: #FFA537;
+
+    --main-caret-color: #837A93;
 }
 
 /* Base styles */
@@ -47,13 +49,13 @@ body {
     align-items: center;
 }
 
-.logo {
+.header-logo {
     display: flex;
     align-items: center;
     gap: 21px;
 }
 
-.logo-image {
+.header-logo-image {
     height: 21px;
     width: auto;
 }
@@ -134,6 +136,18 @@ body {
 .btn-signup:hover {
     background-color: var(--main-hover-color);
     transition: background-color 0.5s ease;
+}
+
+input[type="text"] {
+    caret-color: var(--main-caret-color);
+}
+
+textarea {
+    caret-color: var(--main-caret-color);
+}
+
+[contenteditable="true"] {
+    caret-color: var(--main-caret-color);
 }
 
 /* Hero Section */
@@ -514,21 +528,192 @@ body {
 .newcomer-tools-section {
     padding-top: 110px;
     padding-bottom: 100px;
-    display: flex;
-    align-items: center;
 }
 
 .newcomer-tools-container {
     display: flex;
-    align-items: center;
 }
 
+.newcomer-tools-container {
+    display: flex;
+    gap: 60px;
+    align-items:flex-start;
+}
 
+.newcomer-content {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
 
+    margin-right: 170px;
+}
 
-/* Testimonial Section */
+.newcomer-section-title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+    color: var(--second-text-color);
+    margin-bottom: 30px;
+}
+
+.newcomer-section-subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 167%;
+    color: var(--third-text-color);
+
+    width: 472px;
+    margin-bottom: 60px;
+}
+
+.btn-explore-more {
+    width: 198px;
+    height: 58px;
+    background-color: var(--accent-color);
+    color: var(--main-text-color);
+    border-radius: 8px;
+
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.btn-explore-more:hover {
+    background-color: var(--main-hover-color);
+    color: var(--main-text-color);
+    transition: background-color 0.5s ease;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 288px);
+    gap: 24px;
+    justify-content: center;
+}
+
+.newcomer-tool-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 288px;
+    height: 284px;
+    padding: 28px 22px;
+    box-sizing: border-box;
+    
+    margin-bottom: 0;
+    
+    margin-bottom: 50px;
+}
+
+.newcomer-tool-card:hover {
+    background-image: url(../img/tool-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    border: rgb(255, 255, 255, 0.1) 2px solid;
+    backdrop-filter: blur(50px);
+    transform: translateY(-5px);
+    transition: transform 0.5s ease, background-image 0.5s ease;
+}
+
+.newcomer-tool-card:hover .newcomer-tool-name {
+    color: var(--main-text-color);
+    transition: color 0.3s ease;
+}
+
+.newcomer-tool-card:hover .newcomer-tool-price {
+    color: var(--main-tool-hover-color);
+    transition: color 0.3s ease;
+}
+
+.newcomer-tool-card:hover .newcomer-tool-description {
+    color: var(--second-text-color);
+    transition: color 0.3s ease;
+}
+
+.newcomer-tool-header {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.newcomer-tool-icon {
+    width: 64px;
+    height: auto;
+
+    margin-right: 30px;
+}
+
+.newcomer-tool-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.newcomer-tool-name {
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--second-text-color);
+
+    margin-bottom: 5px;
+}
+
+.newcomer-tool-price {
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--main-tool-name-color);
+}
+
+.newcomer-tool-description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 214%;
+    color: var(--main-tool-color);
+
+    margin-bottom: 30px;
+}
+
+.newcomer-tool-actions {
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+}
+
+.newcomer-action-icon {
+    width: 24px;
+    height: 24px;
+    gap: 12px;
+    margin-right: 28px;
+}
+
+.newcomer-btn-visit {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+
+    padding: 9px 35px;
+    border-radius: 8px;
+
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--main-tool-color);
+
+    margin-left: 35px;
+}
+
+.newcomer-btn-visit:hover {
+    color: var(--main-text-color);
+    background-color: var(--accent-color);
+    transition: 0.4s ease;
+}
+
+/* Testimonial Section Styles */
 
 .testimonial-section {
+    margin-top: 40px;
+    margin-bottom: 105px;
     text-align: center;
 }
 
@@ -536,127 +721,146 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1200px;
 }
 
 .testimonial-card {
-    background-color: var(--card-background-color);
-    border-radius: 16px;
-    padding: 40px;
-    max-width: 800px;
-    margin-bottom: 40px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Align content to the left */
+    flex-direction: row;
+    /* Элементы расположены в ряд: аватар слева, текст справа */
+    align-items: center;
+    /* Выравниваем элементы по центру по вертикали */
+    justify-content: center;
+    /* Центрируем содержимое карточки */
+    gap: 80px;
+    /* Отступ между аватаром и текстом */
+    width: 100%;
+    /* Карточка занимает всю доступную ширину */
+    max-width: 900px;
+    /* Максимальная ширина самой карточки */
+    margin-bottom: 70px;
+    /* Отступ между карточкой и навигацией */
     position: relative;
-    border: 1px solid var(--border-color);
-}
-
-.testimonial-card::before {
-    content: '“';
-    /* Opening quote */
-    font-family: var(--second-family);
-    /* Or a specific font for quotes */
-    font-size: 100px;
-    color: rgba(255, 255, 255, 0.1);
-    position: absolute;
-    top: 10px;
-    right: 40px;
-    z-index: 0;
+    /* Для позиционирования цитаты и фона */
 }
 
 .testimonial-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 4px solid var(--accent-color);
-    box-shadow: 0 0 0 8px rgba(255, 110, 48, 0.2);
 }
 
 .testimonial-info {
-    text-align: left;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 10px 22px;
+
+    background-image: url(../img/testimonial-info-bg.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .testimonial-name {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 26px;
+    letter-spacing: 0.01em;
+    color: var(--second-text-color);
 }
 
 .testimonial-role {
+    font-weight: 400;
     font-size: 16px;
-    color: var(--second-text-color);
+    color: var(--third-text-color);
 }
 
 .testimonial-text {
-    font-size: 18px;
-    color: var(--second-text-color);
-    line-height: 1.8;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 214%;
+    letter-spacing: 0.01em;
+    color: rgba(255, 255, 255, 0.78);
     text-align: left;
+
     position: relative;
-    z-index: 1;
-    /* Ensure text is above pseudo-element quote */
+    max-width: 600px;
+    padding-left: 50px;
 }
 
+/* Навигация */
 .testimonial-navigation {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
+    /* Отступ между элементами навигации */
+    margin-top: 50px;
+    /* Отступ сверху от карточки */
 }
 
 .nav-arrow {
-    background-color: var(--card-background-color);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--border-color);
-    transition: background-color 0.3s ease;
-}
-
-.nav-arrow:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    /* Ширина стрелки */
+    height: 40px;
+    /* Высота стрелки */
+    position: relative;
+    /* Если вы будете использовать SVG, удалите эти стили: */
 }
 
 .nav-arrow::before {
     content: '';
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-top: 2px solid var(--main-text-color);
-    border-left: 2px solid var(--main-text-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    /* Размер стрелки */
+    height: 12px;
+    /* Размер стрелки */
+    border-top: 2px solid var(--second-text-color);
+    /* Цвет стрелки */
+    border-right: 2px solid var(--second-text-color);
+    transition: border-color 0.3s ease;
 }
 
-.prev-arrow::before {
-    transform: rotate(-45deg);
+.nav-arrow.prev-arrow::before {
+    transform: translate(-50%, -50%) rotate(225deg);
+    /* Поворот для "назад" */
 }
 
-.next-arrow::before {
-    transform: rotate(135deg);
+.nav-arrow.next-arrow::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+    /* Поворот для "вперед" */
+}
+
+.nav-arrow:hover::before {
+    border-color: var(--accent-color);
+    /* Цвет стрелки при наведении */
 }
 
 .pagination-dots {
     display: flex;
     gap: 10px;
+    /* Отступ между точками */
 }
 
 .dot {
     width: 10px;
     height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    background-color: var(--second-text-color);
-    opacity: 0.5;
-    transition: background-color 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
 }
 
 .dot.active {
     background-color: var(--accent-color);
-    opacity: 1;
+    /* Цвет активной точки */
+    width: 30px;
+    /* Шире для активной точки */
+    border-radius: 5px;
+    /* Скругленные углы для активной точки */
 }
 
 /* Contributor Section */
@@ -665,247 +869,269 @@ body {
 }
 
 .contributor-container {
-    background-color: var(--card-background-color);
-    border-radius: 16px;
-    padding: 60px;
-    border: 1px solid var(--border-color);
+    padding-top: 146px;
+    padding-bottom: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contributor-section .section-title {
-    margin-bottom: 15px;
+.contributor-section-title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--second-text-color);
+
+    margin-bottom: 25px;
 }
 
-.contributor-section .section-subtitle {
-    margin-bottom: 40px;
+.contributor-section-subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 167%;
+    text-align: center;
+    color: var(--third-text-color);
+
+    width: 427px;
+    margin-bottom: 100px;
 }
 
 .newsletter-form {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    background-color: #283036;
+    border-radius: 15px;
+    height: 64px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+
 }
 
 .email-input {
-    background-color: transparent;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 15px 20px;
-    font-size: 16px;
+    caret-color: #837A93;
+    border: none;
+    background: transparent;
+    font-weight: 400;
+    font-size: 14px;
     color: var(--main-text-color);
-    width: 350px;
-    /* Adjust width as needed */
-    outline: none;
+
+    padding-right: 260px;
 }
 
 .email-input::placeholder {
-    color: var(--second-text-color);
+    color: var(--third-text-color);
 }
 
+.email-input:focus {
+    outline: none;
+}
+
+
 .btn-join-us {
+
     background-color: var(--accent-color);
-    color: var(--main-text-color);
-    padding: 15px 30px;
+    padding: 12px 36px;
     border-radius: 8px;
+
+    font-weight: 600;
     font-size: 16px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+    color: var(--main-text-color);
 }
 
 .btn-join-us:hover {
-    background-color: #e06020;
+    background-color: var(--main-hover-color);
+    transition: background-color 0.5s ease;
 }
 
 /* Footer */
 
 .footer {
-    padding: 60px 0;
+    padding-top: 70px;
+    padding-bottom: 98px;
+    border-top: 0.5px solid var(--border-color);
     background-color: var(--main-background-color);
-    border-top: 1px solid var(--border-color);
+    font-family: var(--font-family);
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
+    /* align-items: flex-start;  <-- Добавляем это свойство */
     flex-wrap: wrap;
     gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-col {
-    flex: 1;
-    min-width: 200px;
-    /* Ensures columns don't get too small */
+    display: flex;
+    flex-direction: column;
+    /* Если у footer-col есть margin-top, его нужно убрать */
+    margin-top: 0;
+    /* Убедитесь, что нет лишнего отступа сверху */
 }
 
-.footer-about .logo {
-    margin-bottom: 20px;
+.footer-first-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+    flex-basis: 260px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.footer-logo-image {
+    height: 38px;
+    width: auto;
+}
+
+.logo-text {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--accent-color);
 }
 
 .footer-copyright {
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 16px;
     color: var(--second-text-color);
-    margin-bottom: 10px;
+    margin-bottom: 21px;
+    white-space: nowrap;
 }
 
 .footer-description {
+    font-weight: 400;
     font-size: 14px;
-    color: var(--second-text-color);
-    line-height: 1.6;
+    line-height: 179%;
+    color: var(--third-text-color);
+    width: 260px;
+}
+
+.footer-last-list {
+    display: flex;
+    flex-direction: row;
+    gap: 115px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 1;
 }
 
 .footer-heading {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.footer-list {
-    font-size: 15px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
     color: var(--second-text-color);
+    margin-bottom: 25px;
+    margin-top: 0;
 }
 
-.footer-item {
-    margin-bottom: 10px;
+.footer-contact-address {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--third-text-color);
+    margin-bottom: 15px;
+
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .hero-image-placeholder {
-        position: static;
-        transform: none;
-        margin-top: 40px;
-        opacity: 0.5;
-    }
-
-    .newcomer-tools-container {
-        flex-direction: column;
-    }
-
-    .newcomer-content,
-    .newcomer-tools-section .tools-grid {
-        width: 100%;
-        text-align: center;
-    }
-
-    .newcomer-content .section-title,
-    .newcomer-content .section-subtitle {
-        text-align: center;
-    }
+.footer-contact-address:hover {
+    color: var(--main-text-color);
+    transition: color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .header-container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.footer-col .footer-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--third-text-color);
+    margin-bottom: 15px;
+}
 
-    .nav {
-        width: 100%;
-        margin-top: 20px;
-    }
+.footer-col .footer-item:last-child {
+    margin-bottom: 0;
+}
 
-    .nav-list {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
+.footer-item:hover {
+    color: var(--main-text-color);
+    transition: color 0.3s ease;
+}
 
-    .auth-buttons {
-        margin-top: 20px;
-    }
-
-    .hero-title {
-        font-size: 42px;
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .search-bar {
-        flex-direction: column;
-    }
-
-    .search-input {
-        margin-bottom: 10px;
-    }
-
-    .section-title {
-        font-size: 36px;
-    }
-
-    .section-subtitle {
-        font-size: 16px;
-    }
-
-    .trusted-brands-container {
-        padding: 30px;
-    }
-
-    .brand-logos {
-        gap: 30px;
-    }
-
-    .tools-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .email-input {
-        width: 100%;
-        max-width: 400px;
-        /* Limit max width for smaller screens */
-    }
-
+@media (max-width: 992px) {
     .footer-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .footer-col {
+    .footer-first-list,
+    .footer-last-list {
         width: 100%;
+        align-items: center;
         text-align: center;
+    }
+
+    .footer-col {
+        margin-bottom: 40px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-description {
+        width: auto;
+        max-width: 500px;
+    }
+
+    .footer-last-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .footer-col:last-child {
+        margin-bottom: 0;
     }
 }
 
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 32px;
+@media (max-width: 576px) {
+    .footer {
+        padding: 40px 0;
     }
 
-    .btn {
-        padding: 10px 20px;
+    .footer-heading {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .footer-col .footer-item {
+        font-size: 15px;
+        line-height: 150%;
+        margin-bottom: 10px;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .footer-logo-image {
+        margin-bottom: 10px;
+    }
+
+    .footer-copyright {
         font-size: 14px;
-    }
-
-    .tool-name {
-        font-size: 20px;
-    }
-
-    .testimonial-avatar {
-        width: 80px;
-        height: 80px;
-    }
-
-    .testimonial-name {
-        font-size: 20px;
-    }
-
-    .testimonial-text {
-        font-size: 16px;
     }
 }
