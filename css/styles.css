@@ -332,6 +332,10 @@ textarea {
     padding: 33px 33px;
 
     margin-bottom: 100px;
+    box-shadow: none;
+    transition: background-image 1s ease, border-color 1s ease;
+    will-change: box-shadow, border-color, backdrop-filter, transform;
+
 }
 
 .tool-card:hover {
@@ -339,10 +343,10 @@ textarea {
     background-size: cover;
     background-position: center;
     border-radius: 15px;
+    transform: translateY(-5px);
     border: rgb(255, 255, 255, 0.1) 2px solid;
     backdrop-filter: blur(50px);
-    transform: translateY(-5px);
-    transition: transform 0.5s ease, background-image 0.5s ease;
+    transition: transform 0.5s ease, background-image 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease;
 }
 
 .tool-card:hover .tool-name {
@@ -402,14 +406,43 @@ textarea {
     padding-top: 30px;
 }
 
-.action-icon {
-    width: 24px;
-    height: 24px;
+.like-icon {
+    padding: 7px;
+    margin-right: 12px;
+    background-color: transparent;
+    border-radius: 8px;
 }
 
-.like-icon {
-    margin-right: 28px;
+.bookmark-icon {
+    padding: 7px;
+    background-color: transparent;
+    border-radius: 8px;
 }
+
+.like-icon:hover path {
+    fill: #FD3B41;
+    fill-opacity: 1;
+    box-shadow: 0 5px 10px -3px rgba(18, 18, 18, 0.15);
+    background: #283036;
+    transition: fill 0.3s ease, fill-opacity 0.3s ease;
+}
+
+.bookmark-icon:hover path {
+    fill: white;
+    fill-opacity: 1;
+    transition: fill 0.3s ease, fill-opacity 0.3s ease;
+}
+
+.like-icon:hover {
+    background-color: #283036;
+    box-shadow: 0 5px 10px -3px rgba(18, 18, 18, 0.15);
+}
+
+.bookmark-icon:hover {
+    background-color: #283036;
+    box-shadow: 0 5px 10px -3px rgba(18, 18, 18, 0.15);
+}
+
 
 .btn-visit {
     display: flex;
@@ -450,6 +483,8 @@ textarea {
     color: var(--main-text-color);
     transition: background-color 0.5s ease;
 }
+
+
 
 /* Trusted Brands Section */
 
@@ -613,7 +648,7 @@ textarea {
     border: rgb(255, 255, 255, 0.1) 2px solid;
     backdrop-filter: blur(50px);
     transform: translateY(-5px);
-    transition: transform 0.5s ease, background-image 0.5s ease;
+    transition: transform 0.5s ease, background-image 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease;
 }
 
 .newcomer-tool-card:hover .newcomer-tool-name {
@@ -642,7 +677,7 @@ textarea {
     width: 64px;
     height: auto;
 
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .newcomer-tool-info {
@@ -653,7 +688,7 @@ textarea {
 .newcomer-tool-name {
     font-weight: 500;
     font-size: 24px;
-    color: var(--second-text-color);
+    color: var(--third-text-color);
 
     margin-bottom: 5px;
 }
@@ -700,7 +735,7 @@ textarea {
     font-size: 16px;
     color: var(--main-tool-color);
 
-    margin-left: 35px;
+    margin-left: 40px;
 }
 
 .newcomer-btn-visit:hover {
@@ -714,65 +749,20 @@ textarea {
 .testimonial-section {
     margin-top: 40px;
     margin-bottom: 105px;
-    text-align: center;
-}
-
-.testimonial-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
 }
 
 .testimonial-card {
     display: flex;
     flex-direction: row;
-    /* Элементы расположены в ряд: аватар слева, текст справа */
     align-items: center;
-    /* Выравниваем элементы по центру по вертикали */
     justify-content: center;
-    /* Центрируем содержимое карточки */
-    gap: 80px;
-    /* Отступ между аватаром и текстом */
-    width: 100%;
-    /* Карточка занимает всю доступную ширину */
-    max-width: 900px;
-    /* Максимальная ширина самой карточки */
-    margin-bottom: 70px;
-    /* Отступ между карточкой и навигацией */
-    position: relative;
-    /* Для позиционирования цитаты и фона */
-}
-
-.testimonial-avatar {
-}
-
-.testimonial-info {
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    padding: 10px 22px;
-
-    background-image: url(../img/testimonial-info-bg.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.testimonial-name {
-    font-weight: 500;
-    font-size: 26px;
-    letter-spacing: 0.01em;
-    color: var(--second-text-color);
-}
-
-.testimonial-role {
-    font-weight: 400;
-    font-size: 16px;
-    color: var(--third-text-color);
 }
 
 .testimonial-text {
+    position: relative;
+    padding-left: 50px;
+    font-size: 1em;
+    line-height: 1.6;
     font-family: var(--third-family);
     font-weight: 400;
     font-size: 14px;
@@ -781,89 +771,71 @@ textarea {
     color: rgba(255, 255, 255, 0.78);
     text-align: left;
 
-    position: relative;
-    max-width: 600px;
-    padding-left: 50px;
+    width: 393px;
+    height: auto;
+    margin-left: 30px;
 }
 
-/* Навигация */
-.testimonial-navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    /* Отступ между элементами навигации */
-    margin-top: 50px;
-    /* Отступ сверху от карточки */
-}
-
-.nav-arrow {
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 40px;
-    /* Ширина стрелки */
-    height: 40px;
-    /* Высота стрелки */
-    position: relative;
-    /* Если вы будете использовать SVG, удалите эти стили: */
-}
-
-.nav-arrow::before {
-    content: '';
+.testimonial-text::before {
+    content: "“";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 12px;
-    /* Размер стрелки */
-    height: 12px;
-    /* Размер стрелки */
-    border-top: 2px solid var(--second-text-color);
-    /* Цвет стрелки */
-    border-right: 2px solid var(--second-text-color);
-    transition: border-color 0.3s ease;
+    top: -70px;
+    left: -20px;
+    transform: rotate(19.17deg);
+
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 250px;
+    background: linear-gradient(235deg, rgba(252, 252, 252, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    line-height: 1;
+    z-index: 0;
 }
 
-.nav-arrow.prev-arrow::before {
-    transform: translate(-50%, -50%) rotate(225deg);
-    /* Поворот для "назад" */
-}
 
-.nav-arrow.next-arrow::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-    /* Поворот для "вперед" */
-}
-
-.nav-arrow:hover::before {
-    border-color: var(--accent-color);
-    /* Цвет стрелки при наведении */
+.testimonial-avatar {
+    width: 399px;
+    height: 492px;
 }
 
 .pagination-dots {
     display: flex;
-    gap: 10px;
-    /* Отступ между точками */
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
+    width: 44px;
+    height: 6px;
+    background-color: #283036;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
+    transition: background-color 0.3s ease, width 0.3s ease;
 }
 
 .dot.active {
+    width: 44px;
     background-color: var(--accent-color);
-    /* Цвет активной точки */
-    width: 30px;
-    /* Шире для активной точки */
-    border-radius: 5px;
-    /* Скругленные углы для активной точки */
 }
 
+.dot:not(.active):hover {
+    background-color: var(--third-text-color);
+}
+
+
 /* Contributor Section */
+
 .contributor-section {
     text-align: center;
 }
@@ -962,7 +934,6 @@ textarea {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    /* align-items: flex-start;  <-- Добавляем это свойство */
     flex-wrap: wrap;
     gap: 40px;
     max-width: 1200px;
@@ -973,9 +944,7 @@ textarea {
 .footer-col {
     display: flex;
     flex-direction: column;
-    /* Если у footer-col есть margin-top, его нужно убрать */
     margin-top: 0;
-    /* Убедитесь, что нет лишнего отступа сверху */
 }
 
 .footer-first-list {
