@@ -749,6 +749,18 @@ textarea {
 .testimonial-section {
     margin-top: 40px;
     margin-bottom: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1300px;
+
 }
 
 .testimonial-card {
@@ -773,7 +785,43 @@ textarea {
 
     width: 393px;
     height: auto;
-    margin-left: 30px;
+    margin-right: 40px;
+}
+
+.nav-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 60px;
+    color: var(--third-text-color);
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.nav-arrow:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.prev-arrow::before {
+    content: "\2039";
+}
+
+.next-arrow::after {
+    content: "\203A";
+}
+
+.nav-arrow.prev-arrow {
+    margin-right: 150px;
+}
+
+.nav-arrow.next-arrow {
+    margin-left: 150px;
 }
 
 .testimonial-text::before {
@@ -782,29 +830,27 @@ textarea {
     top: -70px;
     left: -20px;
     transform: rotate(19.17deg);
-
     font-family: var(--second-family);
     font-weight: 500;
     font-size: 250px;
     background: linear-gradient(235deg, rgba(252, 252, 252, 0) 0%, rgba(255, 255, 255, 0.5) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
     -webkit-background-clip: text;
     background-clip: text;
-
     -webkit-text-fill-color: transparent;
     color: transparent;
 
     line-height: 1;
-    z-index: 0;
+    z-index: -1;
+
+    transition: none;
 }
 
 
 .testimonial-avatar {
     width: 399px;
     height: 492px;
+    max-width: none;
+    object-fit: fill;
 }
 
 .pagination-dots {
@@ -832,6 +878,8 @@ textarea {
 .dot:not(.active):hover {
     background-color: var(--third-text-color);
 }
+
+
 
 
 /* Contributor Section */
