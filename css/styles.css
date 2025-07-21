@@ -169,7 +169,7 @@ textarea {
     flex-direction: column;
     justify-content: space-between;
     height: 569px;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 .hero-content {
@@ -306,7 +306,7 @@ textarea {
 /* Section Tools */
 
 .popular-tools-container {
-    margin-top: 100px;
+    padding-top: 100px;
 }
 
 .section-title {
@@ -405,7 +405,10 @@ textarea {
 .tool-price {
     font-weight: 400;
     font-size: 18px;
-    color: var(--main-tool-name-color)
+    color: var(--main-tool-name-color);
+
+    width: 100px;
+
 }
 
 .tool-description {
@@ -690,7 +693,7 @@ textarea {
     display: flex;
     align-items: center;
 
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .newcomer-tool-icon {
@@ -710,7 +713,7 @@ textarea {
     font-size: 24px;
     color: var(--third-text-color);
 
-    margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 .newcomer-tool-price {
@@ -725,7 +728,7 @@ textarea {
     line-height: 214%;
     color: var(--main-tool-color);
 
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 .newcomer-tool-actions {
@@ -923,7 +926,7 @@ textarea {
     text-align: center;
     color: var(--second-text-color);
 
-    margin-bottom: 25px;
+    padding-bottom: 25px;
 }
 
 .contributor-section-subtitle {
