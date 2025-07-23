@@ -31,7 +31,7 @@ body {
 }
 
 .container {
-    max-width: 1230px;
+    width: 1240px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -95,7 +95,7 @@ body {
 
 .nav-link:hover {
     color: var(--main-text-color);
-    transition: 0.3s ease;
+    transition: 0.3s ease-in-out;
 }
 
 .nav-item.dropdown {
@@ -144,7 +144,7 @@ body {
 .btn-login:hover {
     color: var(--main-text-color);
     background-color: var(--accent-color);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease-in-out;
     
 }
 
@@ -162,7 +162,7 @@ body {
 
 .btn-signup:hover {
     background-color: var(--main-hover-color);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease-in-out;
 }
 
 input[type="text"] {
@@ -286,7 +286,7 @@ textarea {
 
 .btn-search:hover {
     background-color: var(--main-hover-color);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .social-links {
@@ -322,13 +322,14 @@ textarea {
 .social-item:hover {
     background-color: var(--accent-color);
     border-radius: 8px;
-    transition: 0.5s ease;
+    transition: 0.5s ease-in-out;
 }
 
 /* Section Tools */
 
 .popular-tools-container {
     padding-top: 100px;
+    width: 1280px;
 }
 
 .section-title {
@@ -354,24 +355,24 @@ textarea {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
-    gap: 30px;
-
+    margin: 0 auto;
 }
 
 .tool-card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+
+    width: 392px;
+    height: 294px;
+    border-radius: 5px;
 
     padding: 33px 33px;
-
-    margin-bottom: 100px;
-    box-shadow: none;
-    transition: background-image 1s ease, border-color 1s ease;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out, 0.3s ease-in-out, border-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
     will-change: box-shadow, border-color, backdrop-filter, transform;
-
+    margin-bottom: 100px;
+    margin-right: 24px;
 }
 
 .tool-card:hover {
@@ -379,28 +380,29 @@ textarea {
     background-size: cover;
     background-position: center;
     border-radius: 15px;
-    transform: translateY(-5px);
     border: rgb(255, 255, 255, 0.1) 2px solid;
+    transform: (-10px);
     backdrop-filter: blur(50px);
-    transition: transform 0.5s ease, background-image 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease;
+    transition: transform 0.3s ease-in-out, 0.3s ease-in-out, border-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+    will-change: box-shadow, border-color, backdrop-filter, transform;
 }
 
 .tool-card:hover .tool-icon {
     filter: opacity(1) brightness(1);
-    transition: 0.3s ease;
+    transition: 0.3s ease-in-out;
 }
 
 .tool-card:hover .tool-name {
     color: var(--main-text-color);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out;
 }
 .tool-card:hover .tool-price {
     color: var(--main-tool-hover-color);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out;
 }
 .tool-card:hover .tool-description {
     color: var(--second-text-color);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out;
 }
 
 .tool-header {
@@ -418,6 +420,7 @@ textarea {
 }
 
 .tool-name {
+    width: 229px;
     font-weight: 500;
     font-size: 24px;
     color: rgb(255, 255, 255, 0.78);
@@ -469,13 +472,13 @@ textarea {
     fill-opacity: 1;
     box-shadow: 0 5px 10px -3px rgba(18, 18, 18, 0.15);
     background: #283036;
-    transition: fill 0.3s ease, fill-opacity 0.3s ease;
+    transition: fill 0.3s ease-in-out, fill-opacity 0.3s ease-in-out;
 }
 
 .bookmark-icon:hover path {
     fill: white;
     fill-opacity: 1;
-    transition: fill 0.3s ease, fill-opacity 0.3s ease;
+    transition: fill 0.3s ease-in-out, fill-opacity 0.3s ease-in-out;
 }
 
 .like-icon:hover {
@@ -526,7 +529,7 @@ textarea {
 .tools-btn:hover {
     background-color: var(--accent-color);
     color: var(--main-text-color);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease-in-out;
 }
 
 
@@ -576,7 +579,7 @@ textarea {
 .brand-logo:hover {
     filter: brightness(0.8);
     transform: scale(1.1);
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 /* Popular Tools Section */
@@ -595,7 +598,7 @@ textarea {
     margin-top: 50px;
     font-size: 16px;
     font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .btn-load-more:hover {
@@ -660,7 +663,7 @@ textarea {
 .btn-explore-more:hover {
     background-color: var(--main-hover-color);
     color: var(--main-text-color);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .tools-grid {
@@ -693,22 +696,22 @@ textarea {
     border: rgb(255, 255, 255, 0.1) 2px solid;
     backdrop-filter: blur(50px);
     transform: translateY(-5px);
-    transition: transform 0.5s ease, background-image 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease;
+    transition: transform 0.5s ease-in-out, background-image 0.5s ease-in-out, border-color 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
 }
 
 .newcomer-tool-card:hover .newcomer-tool-name {
     color: var(--main-text-color);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out;
 }
 
 .newcomer-tool-card:hover .newcomer-tool-price {
     color: var(--main-tool-hover-color);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out;
 }
 
 .newcomer-tool-card:hover .newcomer-tool-description {
     color: var(--second-text-color);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out;
 }
 
 .newcomer-tool-header {
@@ -786,7 +789,7 @@ textarea {
 .newcomer-btn-visit:hover {
     color: var(--main-text-color);
     background-color: var(--accent-color);
-    transition: 0.4s ease;
+    transition: 0.4s ease-in-out;
 }
 
 /* Testimonial Section Styles */
@@ -912,7 +915,7 @@ textarea {
     background-color: #283036;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, width 0.3s ease;
+    transition: background-color 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
 .dot.active {
@@ -1011,7 +1014,7 @@ textarea {
 
 .btn-join-us:hover {
     background-color: var(--main-hover-color);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease-in-out;
 }
 
 /* Footer */
@@ -1105,7 +1108,7 @@ textarea {
 
 .footer-contact-address:hover {
     color: var(--main-text-color);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out;
 }
 
 .footer-col .footer-item {
@@ -1122,71 +1125,5 @@ textarea {
 
 .footer-item:hover {
     color: var(--main-text-color);
-    transition: color 0.3s ease;
-}
-
-@media (max-width: 992px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-first-list,
-    .footer-last-list {
-        width: 100%;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-col {
-        margin-bottom: 40px;
-        align-items: center;
-        width: 100%;
-    }
-
-    .footer-description {
-        width: auto;
-        max-width: 500px;
-    }
-
-    .footer-last-list {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 60px;
-    }
-
-    .footer-col:last-child {
-        margin-bottom: 0;
-    }
-}
-
-@media (max-width: 576px) {
-    .footer {
-        padding: 40px 0;
-    }
-
-    .footer-heading {
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-
-    .footer-col .footer-item {
-        font-size: 15px;
-        line-height: 150%;
-        margin-bottom: 10px;
-    }
-
-    .footer-logo {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .footer-logo-image {
-        margin-bottom: 10px;
-    }
-
-    .footer-copyright {
-        font-size: 14px;
-    }
+    transition: color 0.3s ease-in-out;
 }
